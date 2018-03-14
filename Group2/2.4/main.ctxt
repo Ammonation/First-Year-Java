@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=main
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=side
+comment2.target=boolean\ checkEven(int)
+comment3.params=side
+comment3.target=boolean\ checkRange(int)
+numComments=4

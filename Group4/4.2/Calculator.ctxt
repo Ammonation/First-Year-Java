@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Calculator
+comment1.params=action\ number
+comment1.target=void\ evaluate(char,\ long)
+comment1.text=\n\ perform\ the\ operation\n\ theResult\ \=\ theResult\ 'action'\ number\n\ @param\ action\ An\ arithmetic\ operation\ +\ -\ *\ /\n\ @param\ number\ A\ whole\ number\n
+comment2.params=
+comment2.target=long\ getValue()
+comment2.text=\n\ Return\ the\ long\ calculated\ value\n\ @return\ The\ calculated\ value\n
+comment3.params=number
+comment3.target=void\ setValue(long)
+comment3.text=\n\ Set\ the\ stored\ result\ to\ be\ number\n\ @param\ number\ to\ set\ result\ to.\n
+comment4.params=
+comment4.target=void\ reset()
+comment4.text=\n\ Set\ the\ stored\ result\ to\ be\ 0\n
+numComments=5

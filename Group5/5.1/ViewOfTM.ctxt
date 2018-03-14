@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ViewOfTM
+comment0.text=\n\ The\ GUI,\ consisting\ of\ the\ following\ areas\n\n\ \ \ +------------------------------------------+\n\ \ \ |\ Output\ Area\ 1\ (Single\ line)\ \ \ \ \ \ \ \ \ \ \ \ \ \ |\n\ \ \ +------------------------------------------+\n\n\ \ \ +------------------------------------------+\n\ \ \ |\ Output\ Area\ 2\ (Scrolling\ multiple\ lines)\ |\n\ \ \ +------------------------------------------+\n\n\ \ \ +---+\ \ +---+\ \ +---+\ \ +---+\ \ +---+\ \ +---+\n\ \ \ |\ B\ |\ \ |\ B\ |\ \ |\ \ \ |\ \ |\ \ \ |\ \ |\ \ \ |\ \ |\ \ \ |\n\ \ \ +---+\ \ +---+\ \ +---+\ \ +---+\ \ +---+\ \ +---+\n\n\ \ \ +---+\ \ +---+\ \ +---+\ \ +---+\ \ +---+\ \ +---+\n\ \ \ |\ B\ |\ \ |\ B\ |\ \ |\ \ \ |\ \ |\ \ \ |\ \ |\ \ \ |\ \ |\ \ \ |\n\ \ \ +---+\ \ +---+\ \ +---+\ \ +---+\ \ +---+\ \ +---+\n\n
+comment1.params=
+comment1.target=ViewOfTM()
+comment1.text=\n\ Constructor\ builds\ visual\ representation\ of\ GUI\ and\n\ associates\ a\ single\ action\ with\ each\ button.\n\ Note\ this\ could\ be\ done\ with\ a\ visual\ GUI\ designer\n
+comment2.params=cont
+comment2.target=void\ setController(Controller)
+comment2.text=\n\ Tell\ the\ view\ where\ the\ controller\ is\n\ @param\ cont\ The\ controller\n
+comment3.params=aModelOfTM\ arg
+comment3.target=void\ update(java.util.Observable,\ java.lang.Object)
+comment3.text=\n\ Called\ when\ the\ model\ has\ changed\n\ @param\ aModelOfTM\ The\ model\ of\ the\ ticket\ machine\n\ @param\ arg\ Any\ arguments\n
+numComments=4

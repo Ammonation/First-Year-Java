@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Controller
+comment0.text=\n\ Deal\ with\ TMGUI\ interactions\ from\ user\n
+comment1.params=aModelOfTM\ aViewOfTM
+comment1.target=Controller(ModelOfTM,\ ViewOfTM)
+comment2.params=buttonName
+comment2.target=void\ process(java.lang.String)
+numComments=3

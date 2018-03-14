@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Student
+comment1.params=aName\ aMark
+comment1.target=Student(java.lang.String,\ int)
+comment1.text=\n\ Construct\ a\ student\n\ @param\ aName\ Name\ of\ student\n\ @param\ aMark\ The\ students\ mark\n
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment2.text=\n\ Return\ the\ students\ name\n\ @return\ The\ students\ name\n
+comment3.params=
+comment3.target=int\ getMark()
+comment3.text=\n\ Return\ the\ students\ mark\n\ @return\ The\ students\ mark\ 0\ ..\ 100\n
+numComments=4

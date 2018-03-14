@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=GUI
+comment0.text=\n\ The\ GUI,\ consisting\ of\ the\ following\ areas\n\n\ \ \ +------------------------------------------+\n\ \ \ |\ Output\ Area\ 1\ (Single\ line)\ \ \ \ \ \ \ \ \ \ \ \ \ \ |\n\ \ \ +------------------------------------------+\n\n\ \ \ +------------------------------------------+\n\ \ \ |\ Output\ Area\ 2\ (Scrolling\ multiple\ lines)\ |\n\ \ \ +------------------------------------------+\n\n\ \ \ +---+\ \ +---+\ \ +---+\ \ +---+\ \ +---+\ \ +---+\n\ \ \ |\ B\ |\ \ |\ B\ |\ \ |\ \ \ |\ \ |\ \ \ |\ \ |\ \ \ |\ \ |\ \ \ |\n\ \ \ +---+\ \ +---+\ \ +---+\ \ +---+\ \ +---+\ \ +---+\n\n\ \ \ +---+\ \ +---+\ \ +---+\ \ +---+\ \ +---+\ \ +---+\n\ \ \ |\ B\ |\ \ |\ B\ |\ \ |\ \ \ |\ \ |\ \ \ |\ \ |\ \ \ |\ \ |\ \ \ |\n\ \ \ +---+\ \ +---+\ \ +---+\ \ +---+\ \ +---+\ \ +---+\n\n
+comment1.params=
+comment1.target=void\ display()
+comment1.text=\n\ Builds\ visual\ representation\ of\ GUI\ and\n\ associates\ a\ single\ action\ with\ each\ button.\n\ Note\ this\ could\ be\ done\ with\ a\ visual\ GUI\ designer\n
+numComments=2

@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Main
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=cwm\ exm
+comment2.target=boolean\ thresholdCheck(int,\ int)
+comment3.params=cwm\ exm
+comment3.target=boolean\ fortyCheck(int,\ int)
+numComments=4
