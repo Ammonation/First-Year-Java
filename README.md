@@ -1,9 +1,16 @@
 # First-Year-Java
-## This is a collection of coursework completed for my first year programming module
-*Needs **finishing***
-Sorta playing around with MarkDown.
+## Overview
 
-I don't know how to add a new line in markdown whilst using the vi editor yet. Need to look this up.
+This is a collection of Java code that I completed in the first year of my BSc(Hons) Computer Science degree. This repository should consist of 8 directories:
+- Group 1 - Deals with very basic Java concepts
+- Group 2 - Introduces logical problems and if/ else statements
+- Group 3 - Deals with strings
+- Group 4 - Introduces instances and objects
+- Group 5 - Continues instances and objects
+- Group 6 - First introduction of hash maps
+- Mini Project 1 - Create an auto comment indenter
+- Mini Project 2 - Create a version of the game "Breakout"
 
+I am planning on creating more specific README.md files for each indivdual program.
 
-This is a new line.
+If you are a student completing similar tasks, please do not sudmit my code as your own, this will not help you learn how to code. <y code should be used for inspiration only.
