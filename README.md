@@ -9,7 +9,7 @@ This is a collection of Java code that I completed in the first year of my BSc(H
 - [Group 5](https://github.com/Ammonation/First-Year-Java/tree/master/Group5) - Continues instances and objects
 - [Group 6](https://github.com/Ammonation/First-Year-Java/tree/master/Group6) - First introduction of hash maps
 - [Mini Project 1](https://github.com/Ammonation/First-Year-Java/tree/master/MiniProject1) - Create an auto comment indenter
-- [Mini Project 2](https://github.com/Ammonation/First-Year-Java/tree/master/MMiniProject2) - Create a version of the game "Breakout"
+- [Mini Project 2](https://github.com/Ammonation/First-Year-Java/tree/master/MMiniProject2/Game) - Create a version of the game "Breakout"
 
 I am planning on creating more specific README.md files for each individual program.
 
