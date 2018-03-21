@@ -10,9 +10,3 @@ Allows the user to enter the student number, exam mark and coursework mark for a
 Using loops, outputs a square of "**\***". The length of the square is determined by the user.
 ## 1.5
 Using loops, outputs a square outline of "**\***" with "*.*" in the middle. The length of the square is determined by the user.
-
-\*\*\*\*\*  
-\*\.\.\.\*  
-\*\.\.\.\*  
-\*\.\.\.\*  
-\*\*\*\*\*  
