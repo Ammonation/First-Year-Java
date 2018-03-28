@@ -67,9 +67,25 @@ public class ModelOfDiary extends Observable
   public int maxDaysInMonth( int year, int month )
   {
     // *********************************************************
-    // ***  You need to add code here                        ***
+    // ***                      Completed                    ***
     // *********************************************************
-    return 31;
+    // There is a leap year every year divisible by four except for 
+    // years which are both divisible by 100 and not divisible by 400.
+    int maxDaysInMonth[] = {31,28,31,30,31,30,31,31,30,31,30,31};
+  
+    if (month!=2){ //If the months isnt february
+        return maxDaysInMonth[month-1];
+    }
+    
+    else{
+        if (year/4 == 0 && year/400 != 0 && year/100 == 0){
+            System.out.println("***LEAP YEAR***");
+            return maxDaysInMonth[1] + 1;
+        }
+        else {
+            return maxDaysInMonth[1];
+        }
+    }
   }
 
   /**

@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=DiaryIO
+comment1.params=diary
+comment1.target=void\ write(java.util.Map)
+comment1.text=\n\ Write\ the\ map\ to\ a\ disk\ file\ called\ diary.dat\n\ @param\ diary\ The\ map\ representing\ the\ diary\n
+comment2.params=in
+comment2.target=java.util.Map\ readObject(java.io.ObjectInputStream)
+comment3.params=
+comment3.target=java.util.Map\ read()
+comment3.text=\n\ Read\ the\ map\ representing\ the\ diary\ from\ the\ file\ diary.dat\n\ If\ fails\ to\ read\ the\ file\ diary.dat\ create\ an\ empty\ map.\n\ @return\ A\ map\ representing\ the\ diary\n
+numComments=4
