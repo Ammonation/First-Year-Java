@@ -17,7 +17,7 @@ public class GameObj
   private int   dirY   = 1;    // Direction Y (1 or -1)
 
   /** 
-   * Constructor for a game object (x,y width, height, colour)
+   * Constructor for a game object (x,y, width, height, colour)
    * @param x co-ordinate of the game object
    * @param y co-ordinate of the game object
    * @param widthIs  width of the game object

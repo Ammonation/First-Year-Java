@@ -7,7 +7,7 @@ import java.awt.Color;
  */
 public enum Colour  
 { 
-  RED(Color.RED), BLUE(Color.BLUE), GRAY(Color.GRAY);
+  RED(Color.RED), BLUE(Color.BLUE), GRAY(Color.GRAY), YELLOW(Color.YELLOW);
 
   private final Color c;
 

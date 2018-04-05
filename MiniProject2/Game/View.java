@@ -25,7 +25,8 @@ public class View extends JFrame implements Observer
   private Controller controller;
   private GameObj   bat;            // The bat
   private GameObj   ball;           // The ball
-  private List<GameObj> bricks;     // The bricks
+  //private List<GameObj> bricks;     // The bricks
+  private GameObj bricks;     // The bricks
   private int       score =  0;     // The score
   private int       frames = 0;     // Frames output
 
@@ -66,12 +67,12 @@ public class View extends JFrame implements Observer
       g.setPaint( Color.WHITE );
       g.fill( new Rectangle2D.Float( 0, 0, width, height) );
   
-      Font font = new Font("Monospaced",Font.BOLD,24); 
+      Font font = new Font("Monospaced",Font.BOLD,24); // This changes the size of the font at top of the game
       g.setFont( font );
       
       displayGameObj( g, ball );   // Display the Ball
       displayGameObj( g, bat  );   // Display the Bat
-  
+      displayGameObj( g, bricks);  //Displays the bricks?
      
       // *[4]****************************************************[4]*
       // * Display the bricks that make up the game                 *
@@ -80,7 +81,7 @@ public class View extends JFrame implements Observer
       // ************************************************************
       
       // Display state of game
-      g.setPaint( Color.black );
+      g.setPaint( Color.blue );
       FontMetrics fm = getFontMetrics( font );
       String fmt = "BreakOut: Score = [%6d] fps=%5.1f";
       String text = String.format(fmt, score, 
@@ -95,8 +96,7 @@ public class View extends JFrame implements Observer
   private void displayGameObj( Graphics2D g, GameObj go )
   {
     g.setColor( go.getColour().forSwing() );
-    g.fill( new Rectangle2D.Float( go.getX(),     go.getY(), 
-                                   go.getWidth(), go.getHeight() ) );
+    g.fill( new Rectangle2D.Float( go.getX(), go.getY(), go.getWidth(), go.getHeight() ) );
   }
   
   /**

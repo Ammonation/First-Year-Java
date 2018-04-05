@@ -27,6 +27,7 @@ public class Model extends Observable
 
   private GameObj ball;          // The ball
   private List<GameObj> bricks;  // The bricks
+  //private GameObj bricks;  // The bricks
   private GameObj bat;           // The bat
   
   private boolean runGame = true; // Game running
@@ -54,6 +55,8 @@ public class Model extends Observable
       bat    = new GameObj(W/2, H - BRICK_HEIGHT*1.5f, BRICK_WIDTH*3, 
                               BRICK_HEIGHT/4, Colour.GRAY);
       bricks = new ArrayList<>();
+      
+      //bricks = new GameObj(W/2, H/2, BRICK_WIDTH, BRICK_HEIGHT, Colour.YELLOW);
       // *[1]******************************************************[1]*
       // * Fill in code to place the bricks on the board              *
       // **************************************************************
@@ -93,8 +96,8 @@ public class Model extends Observable
 
   public GameObj getBall()            { return ball; }
 
-  public List<GameObj> getBricks()    { return bricks; }
-
+  //public List<GameObj> getBricks()    { return bricks; }
+  public GameObj getBricks() {return bricks;}
   /**
    * Add to score n units
    * @param n units to add to score
@@ -148,7 +151,8 @@ public class Model extends Observable
         {
           GameObj       ball   = getBall();     // Ball in game
           GameObj       bat    = getBat();      // Bat
-          List<GameObj> bricks = getBricks();   // Bricks
+          //List<GameObj> bricks = getBricks();   // Bricks
+          GameObj bricks = getBricks();
         }
   
         while (runGame)
