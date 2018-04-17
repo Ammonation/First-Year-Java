@@ -1,3 +1,5 @@
+import java.awt.Color;
+import java.util.ArrayList;
 /**
  * An Object in the game, represented as a rectangle.
  *  Which holds details of shape, plus possible direction of travel.
@@ -12,7 +14,7 @@ public class GameObj
   private float topY   = 0.0f; // Top left corner Y
   private float width  = 0.0f; // Width of object
   private float height = 0.0f; // Height of object
-  private Colour colour;       // Colour of object
+  private Color colour;       // Colour of object
   private int   dirX   = 1;    // Direction X (1 or -1)
   private int   dirY   = 1;    // Direction Y (1 or -1)
 
@@ -24,12 +26,13 @@ public class GameObj
    * @param heightIs height of the game object
    * @param c Colour of the game object
    */
-  public GameObj( float x, float y,
-                float widthIs, float heightIs, Colour c )
+  public GameObj( float x, float y, float widthIs, float heightIs, Color c ) 
   {
-    topX   = x;       topY = y;
-    width  = widthIs; height = heightIs; 
-    colour = c;
+    topX   = x;       
+    topY = y;
+    width  = widthIs; 
+    height = heightIs; 
+    colour = c; //FIX THIS
   }
 
   /**
@@ -77,8 +80,11 @@ public class GameObj
    * The colour of the game object
    * @return The colour of the game object 
    */
-  public Colour getColour() { return colour; }
+  public Color getColour() { return colour; } 
   
+  public void makeLighter(){
+      colour = getColour().brighter();
+    }
   /**
    * Move object by X units
    *  The actual direction moved is flipped by changeDirectionX()
@@ -131,5 +137,5 @@ public class GameObj
                topY+height <= obj.topY );
 
   }
-  
+
 }

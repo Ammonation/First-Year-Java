@@ -25,8 +25,8 @@ public class View extends JFrame implements Observer
   private Controller controller;
   private GameObj   bat;            // The bat
   private GameObj   ball;           // The ball
-  //private List<GameObj> bricks;     // The bricks
-  private GameObj bricks;     // The bricks
+  private List<GameObj> bricks;     // The bricks
+  //private GameObj bricks;     // The bricks
   private int       score =  0;     // The score
   private int       frames = 0;     // Frames output
 
@@ -72,30 +72,33 @@ public class View extends JFrame implements Observer
       
       displayGameObj( g, ball );   // Display the Ball
       displayGameObj( g, bat  );   // Display the Bat
-      displayGameObj( g, bricks);  //Displays the bricks?
      
       // *[4]****************************************************[4]*
       // * Display the bricks that make up the game                 *
       // * Fill in code to display bricks                           *
       // * Remember only a visible brick is to be displayed         *
       // ************************************************************
-      
-      // Display state of game
-      g.setPaint( Color.blue );
+      for(int i = 0;i<=(bricks.size()-1);i++){
+          //System.out.println("Size of the array is: " + bricks.size());
+          if(bricks.get(i).isVisible()==true){
+          displayGameObj(g, bricks.get(i));
+        }
+        }
+      // Display state of gamed
+      g.setPaint( Color.black );
       FontMetrics fm = getFontMetrics( font );
-      String fmt = "BreakOut: Score = [%6d] fps=%5.1f";
-      String text = String.format(fmt, score, 
-                                  frames/(Timer.timeTaken()/1000.0)
-                     );
+      String fmt = "BREAKOUT Score = [%6d], Timer = [%6d]";// fps=%5.1f";
+      String text = String.format(fmt, score, Timer.timeTaken());//,frames/(Timer.timeTaken()/1000.0));
       if ( frames > RESET_AFTER ) 
         { frames = 0; Timer.startTimer(); }
-      g.drawString( text, width /2-fm.stringWidth(text)/2, 80  );
+      //g.drawString( "BREAKOUT", width /2-fm.stringWidth(text)/2, 60 );
+      g.drawString( text, width /2-fm.stringWidth(text)/2, 55);
     }
   }
   
   private void displayGameObj( Graphics2D g, GameObj go )
   {
-    g.setColor( go.getColour().forSwing() );
+    g.setColor( go.getColour()/*forSwing()*/);
     g.fill( new Rectangle2D.Float( go.getX(), go.getY(), go.getWidth(), go.getHeight() ) );
   }
   

@@ -10,7 +10,7 @@ public class Main
 {
   public static final int H = 800; // Height of window
   public static final int W = 600; // Width of window
-
+  private static int n = 20; // Number of Colours to be generated
   public static void main( String args[] )
   {
     Debug.trace("BreakOut");
@@ -18,8 +18,11 @@ public class Main
 
     Model model = new Model(W,H);   // model of the Game
     View  view  = new View(W,H);    // View of the Game
-                  new Controller( model, view );
-                          
+    
+    new Controller( model, view );
+    
+    Colours.generate(n);
+    
     model.createGameObjects();       // Ball, Bat & Bricks
     model.addObserver( view );       // Add observer to the model
 
