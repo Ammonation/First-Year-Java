@@ -11,26 +11,26 @@ import java.awt.Color;
 public class Model extends Observable
 {
     // Boarder
-    private static final int B              = 5;  // Border offset
-    private static final int M              = 30;  // Menu offset
+    private static final int B              = 5;    // Border offset
+    private static final int M              = 30;   // Menu offset
 
     // Size of things
-    private static final float BALL_SIZE    = 15; // Ball side
-    private static final float BRICK_WIDTH  = 50; // Brick size
+    private static final float BALL_SIZE    = 15;   // Ball side
+    private static final float BRICK_WIDTH  = 50;   // Brick size
     private static final float BRICK_HEIGHT = 30;
 
-    private static final int BAT_MOVE       = 5; // Distance to move bat
+    private static final int BAT_MOVE       = 5;    // Distance to move bat
     public static final float BAT_WIDTH = BRICK_WIDTH*3;
     // Scores
-    private static final int HIT_BRICK      = 50;  // Score
-    private static final int HIT_BOTTOM     = -200;// Score
+    private static final int HIT_BRICK      = 50;   // Score
+    private static final int HIT_BOTTOM     = -100; // Score
     
     private ArrayList<Boolean> brickHitCount = new ArrayList<Boolean>();
     private GameObj ball;          // The ball
     
     private List<GameObj> bricks;  // The bricks
     private int noBricks = 0;      // The number of bricks
-    private int noLayers = 3;      // The number of layers of bricks
+    private int noLayers = 5;      // The number of layers of bricks
     private GameObj bat;           // The bat
 
     private boolean runGame = true; // Game running
@@ -61,7 +61,7 @@ public class Model extends Observable
             Colours.generate(numberColours); // Calls function that randomly creates the required colours for the game
             float indent = 0;
             ball   = new GameObj(W/2, H/2, BALL_SIZE, BALL_SIZE, Color.red );
-            bat    = new GameObj(W/2, H - BRICK_HEIGHT*1.5f, BAT_WIDTH, BRICK_HEIGHT/4, Color.gray);
+            bat    = new GameObj(W/2-(BAT_WIDTH/2), 785, BAT_WIDTH, BRICK_HEIGHT/4, Color.gray);
             bricks = new ArrayList<>();
             for(int u = 1;u<=noLayers;u++) {
                 for(int i = 0 ;i<(W/BRICK_WIDTH)-u+1;i++){
@@ -69,7 +69,7 @@ public class Model extends Observable
                     brickPositionX = brickPositionX + BRICK_WIDTH;
                     noBricks++;
                     brickHitCount.add(i,false);
-                    System.out.println(noBricks);
+                    //System.out.println(noBricks);
                 }
                 brickPositionY = brickPositionY + BRICK_HEIGHT+ 1;
                 indent = indent + (BRICK_WIDTH/2);
@@ -92,6 +92,7 @@ public class Model extends Observable
             Thread t = new Thread( active::runAsSeparateThread );
             t.setDaemon(true);   // So may die when program exits
             t.start();
+            Timer.startTimer();
         }
     }
 
@@ -103,7 +104,10 @@ public class Model extends Observable
     {  
         synchronized ( Model.class )
         {
-            if ( active != null ) { active.stop(); active = null; }
+            if ( active != null ) { 
+                
+                active.stop(); active = null;
+            }
         }
     }
 
@@ -206,7 +210,7 @@ public class Model extends Observable
                                 bricks.get(i).setVisibility(false);
                                 
                                 BRICKHIT++;
-                                System.out.println(BRICKHIT);
+                                //System.out.println(BRICKHIT);
                                 score = score + HIT_BRICK;
                             }
                             if (bricks.get(i).hitBy(ball) && bricks.get(i).isVisible() && !brickHitCount.get(i)){

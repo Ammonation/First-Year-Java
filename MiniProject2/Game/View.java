@@ -46,7 +46,7 @@ public class View extends JFrame implements Observer
     setSize(width, height);                 // Size of window
     addKeyListener( new Transaction() );    // Called when key press
     setDefaultCloseOperation(EXIT_ON_CLOSE);
-    Timer.startTimer();
+    //Timer.startTimer();
   }
 
   /**
@@ -67,7 +67,7 @@ public class View extends JFrame implements Observer
       g.setPaint( Color.WHITE );
       g.fill( new Rectangle2D.Float( 0, 0, width, height) );
   
-      Font font = new Font("Monospaced",Font.BOLD,24); // This changes the size of the font at top of the game
+      Font font = new Font("Monospaced",Font.BOLD,22); // This changes the size of the font at top of the game
       g.setFont( font );
       
       displayGameObj( g, ball );   // Display the Ball
@@ -88,9 +88,9 @@ public class View extends JFrame implements Observer
       g.setPaint( Color.black );
       FontMetrics fm = getFontMetrics( font );
       String fmt = "BREAKOUT Score = [%6d], Timer = [%6d]";// fps=%5.1f";
-      String text = String.format(fmt, score, Timer.timeTaken());//,frames/(Timer.timeTaken()/1000.0));
+      String text = String.format(fmt, score, Timer.timeTaken()/1000);//,frames/(Timer.timeTaken()/1000.0));
       if ( frames > RESET_AFTER ) 
-        { frames = 0; Timer.startTimer(); }
+        { frames = 0;} //Timer.startTimer(); }
       //g.drawString( "BREAKOUT", width /2-fm.stringWidth(text)/2, 60 );
       g.drawString( text, width /2-fm.stringWidth(text)/2, 55);
     }

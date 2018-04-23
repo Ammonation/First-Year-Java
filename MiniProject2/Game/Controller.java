@@ -33,9 +33,10 @@ public class Controller
     switch ( keyCode )               // Character is
     {
       case -KeyEvent.VK_LEFT:        // Left Arrow
-        if(bat.getX()<=9){ // If the left of the bat is touching the left border, the bat won't move
+        if(bat.getX()<=5){ // If the left of the bat is touching the left border, the bat won't movestartTimer
             break;
         }
+        model.moveBat( -1);
         model.moveBat( -1);
       
         break;
@@ -44,6 +45,7 @@ public class Controller
         if(bat.getX()>=445){// If the right of the bat is touching the right border, the bat won't move
             break;
         }
+        model.moveBat( +1 );
         model.moveBat( +1 );
         break;
         
