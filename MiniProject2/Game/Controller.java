@@ -29,7 +29,7 @@ public class Controller
     // Key typed includes specials, -ve
     // Char is ASCII value
     bat = model.getBat();
-    System.out.println(bat.getX());
+    // System.out.println(bat.getX());
     switch ( keyCode )               // Character is
     {
       case -KeyEvent.VK_LEFT:        // Left Arrow
@@ -60,7 +60,7 @@ public class Controller
         break;
         
       default :
-        Debug.trace( "Ch typed = %3d [%c]", keyCode, (char) keyCode );
+        //Debug.trace( "Ch typed = %3d [%c]", keyCode, (char) keyCode );
     }
   }
 

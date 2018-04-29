@@ -11,8 +11,8 @@ import java.awt.Color;
 public class Model extends Observable
 {
     // Boarder
-    private static final int B              = 5;    // Border offset
-    private static final int M              = 30;   // Menu offset
+    private static final int B              = 0;   // Border offset
+    private static final int M              = 0;   // Menu offset
 
     // Size of things
     private static final float BALL_SIZE    = 15;   // Ball side
@@ -29,8 +29,8 @@ public class Model extends Observable
     private GameObj ball;          // The ball
     
     private List<GameObj> bricks;  // The bricks
-    private int noBricks = 0;      // The number of bricks
-    private int noLayers = 5;      // The number of layers of bricks
+    private int noBricks = 0;      // The number of bricks, this is a counter and doesn't define the number of bricks that will be generted
+    private int noLayers = 3;      // The number of layers of bricks
     private GameObj bat;           // The bat
 
     private boolean runGame = true; // Game running
@@ -76,6 +76,11 @@ public class Model extends Observable
                 brickPositionX = B + indent;
                 //System.out.println("BRICK POSITION Y " + brickPositionY);
             }
+            for (int j = 0; j<brickHitCount.size();j++){
+                System.out.println("Brick number: " + j);
+                System.out.println(brickHitCount.get(j));
+            }
+            //System.out.println("Number of bricks: "+noBricks);
         }
     }       
 
@@ -204,7 +209,7 @@ public class Model extends Observable
                         // *      The ball has no effect on an invisible brick          *
                         // **************************************************************
                         for(int i =0 ;i<=noBricks-1;i++){
-                            
+                            // if the brick has already been hit once
                             if (bricks.get(i).hitBy(ball) && bricks.get(i).isVisible() && brickHitCount.get(i)){ //Make the brick disappear if it is hit and it is visable and if it has already been hit once
                                 hit = true;
                                 bricks.get(i).setVisibility(false);
@@ -213,9 +218,10 @@ public class Model extends Observable
                                 //System.out.println(BRICKHIT);
                                 score = score + HIT_BRICK;
                             }
+                            // if the brick hasn't been hit yet
                             if (bricks.get(i).hitBy(ball) && bricks.get(i).isVisible() && !brickHitCount.get(i)){
-                                System.out.println(bricks.get(i).getColour());
-                                bricks.get(i).makeLighter();
+                                //System.out.println(bricks.get(i).getColour());
+                                bricks.get(i).makeDarker();
                                 //System.out.println("Color made lighter");
                                 //System.out.println(bricks.get(i).getColour());
                                 brickHitCount.set(i, true);

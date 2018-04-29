@@ -15,7 +15,8 @@ public class Colours{
     private static void generateRandomNum(int n){
         Random random = new Random();
         for(int i = 0; i<n;i++){
-            randomNum.add(i,random.nextInt(255)+1);
+            randomNum.add(i,random.nextInt(254)+1); // Not returning 255 as this gives the potential for a block to be white
+                                                    // This would make it invisable to the user
         }
     }
 

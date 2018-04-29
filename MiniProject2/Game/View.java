@@ -32,7 +32,7 @@ public class View extends JFrame implements Observer
 
 
   public final int width;  // Size of screen Width
-  public final int height;  // Sizeof screen Height
+  public final int height; // Size of screen Height
 
   /**
    * Construct the view of the game

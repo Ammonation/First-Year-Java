@@ -41,5 +41,5 @@ comment8.params=
 comment8.target=java.awt.Color\ getColour()
 comment8.text=\n\ The\ colour\ of\ the\ game\ object\n\ @return\ The\ colour\ of\ the\ game\ object\ \n
 comment9.params=
-comment9.target=void\ makeLighter()
+comment9.target=void\ makeDarker()
 numComments=15

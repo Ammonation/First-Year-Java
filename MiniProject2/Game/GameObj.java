@@ -82,8 +82,8 @@ public class GameObj
    */
   public Color getColour() { return colour; } 
   
-  public void makeLighter(){
-      colour = getColour().brighter();
+  public void makeDarker(){
+      colour = getColour().darker();
     }
   /**
    * Move object by X units
